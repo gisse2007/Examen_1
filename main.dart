@@ -4,10 +4,13 @@
 // ● Listas ● Mapas  ● Ciclos ● Estructuras switch-case
 import 'dart:io';
 
-import 'actualizar.dart';
-import 'eliminar.dart';
+import 'update.dart';
+import 'delete.dart';
+import 'CreatePro.dart';
+import 'ListarPro.dart';
 
 void main() {
+  List<Map<String, dynamic>> productos = [];
   bool continuar = true;
   while (continuar) {
     print("\n===== Gestionar un catálogo de productos de una tienda =====");
@@ -22,19 +25,19 @@ void main() {
 
     switch (opcion) {
       case 1:
-      ();
+      agregarProducto(productos);
       break;
 
       case 2:
-      ();
+      listarProductos(productos);
       break;
 
       case 3:
-      actualizar();
+      actualizar(productos);
       break;
 
       case 4:
-      eliminar();
+      eliminar(productos);
       break;
 
       case 5:
